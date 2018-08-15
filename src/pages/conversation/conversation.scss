@@ -1,0 +1,22 @@
+page-conversation {
+
+}
+
+.card {
+    width: auto;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.sent {
+    background-color: #003fff;
+    color: white;
+}
+
+.received {
+    background-color: #f8f8f8;
+}
+
+.received > .item-md {
+    background-color: #f8f8f8;
+}

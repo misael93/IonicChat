@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Chat
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h1 text-center>Welcome</h1>
+  <p text-center>Start talking with your friends right now!</p>
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <p ion-text *ngIf="error" text-center color="danger">{{ error }}</p>
+  <button ion-button full margin-top (click)="goToConversation()">Start</button>
 </ion-content>
