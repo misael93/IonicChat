@@ -10,11 +10,13 @@ export class HomePage {
   error: string;
   username: string;
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController) {
+    this.username = '';
+   }
 
   goToConversation = () => {
-    let user = this.username;
-    if (user.trim().length > 0) {
+    let user = this.username.trim();
+    if (user.length > 0) {
       this.error = '';
       this.username = '';
       this.navCtrl.push('ConversationPage', { username: user });

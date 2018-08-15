@@ -19,7 +19,7 @@ export class ConversationPage {
     private navParams: NavParams,
     private _db: DatabaseProvider
   ) {
-    this.username = this.navParams.get('username');
+    this.username = this.navParams.get('username').toLowerCase();
   }
 
   ionViewDidLoad() {
